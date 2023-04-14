@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts</title>
+
+    <!-- this is a script tag for using JavaScript Resources -->
+    <!-- the type property tells the tag what kind of script it is -->
+    <script type="text/JavaScript">
+
+        function replace() {
+            document.getElementById('replace').innerHTML = 'It worked!';            
+        }
+
+    </script>
+
+    <script type="text/javascript" src="../scripts/external-script.js"></script>
+
+</head>
+<body>
+
+    <h1>SCRIPTS</h1>
+
+    <!-- we need this id for the script to work -->
+    <p id="replace">This text will be replaced when we run our script.</p>
+
+    <!-- the onclick property tells us what function to run when the button is clicked -->
+    <button onclick="replace()">REPLACE</button>
+
+    <!-- we need this id for the script to work -->
+    <p id="replaceOther">This text will be replaced when we run our script.</p>
+
+    <!-- the onclick property tells us what function to run when the button is clicked -->
+    <button onclick="replaceOther()">REPLACE other</button>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* this style sets up our overall grid */
+/* display: grid is the starting point */
+
+.grid-container {
+    display: grid;
+    /* this specifies the relative widths of the colums */
+    /* think of fr like parts in cocktail mixing -- one part this, 2 parts that */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 20% 60% 20%; */
+    /* same thing, but for rows */
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+div {
+    /* em is relative padding -- not a fixed pixel size */
+    /* em is relative to the font size of the current element */
+    /* if the font size is 12, the amount of padding here is 36px */
+    padding: 3em;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    grid-column: span 3;
+}
+
+.orange {
+    background-color: orange;
+    grid-row: span 3;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+
+    grid-column: span 2;
+    grid-row: span 3;
+    /* easyway */
+}
+
+.purple {
+    background-color: purple;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.blanched-almond {
+    background-color: blanchedalmond;
+}
+

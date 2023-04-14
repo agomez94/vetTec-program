@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+</head>
+
+<body style="background-color: aqua;>
+
+    <header style="background-color: lightgray;">PAGE HEADER</header>
+
+    <!-- I CAN do this, without a tag, but not recommended. -->
+    Here is some text. Here is some more...
+
+    <!-- 
+        Two main types of tag -- BLOCK AND INLINE
+
+        BLOCK TAGS -- by default, the span the width of the page
+            and they automatically "clear" themselves
+            meanning, they sit on their own line
+            they live in their own "boxes"
+            
+
+        INLINE TAGS -- by default, span only what they include
+            they DO NOT "clear" themselves
+            still have a "box"
+            the <strong> would be inline tag
+      -->
+
+      <!-- 
+
+        NON-SEMANTIC (generic) TAGS
+
+        for block, we use div -- a "division" of the page
+        for inline, we use span -- a span of text
+
+       -->
+
+       <!-- 
+
+        SEMANTIC TAGS -- tags with additional meaning
+
+        SEMANTIC BLOCK TAGS:
+            these behave just like a div, but they give the designer and the page itself additional context and meaning
+
+            main -- the main content area of your page
+            section -- a general section, usually contains other elements 
+            article -- a block of text
+            header-- page header
+            footer -- page footer
+            nav -- navigation bar/area
+            aside -- sidebar or somthing you want highlighted
+
+            SOME semantic block tags have some default styling
+                you CAN override these settings using CSS
+
+            p -- PARAGRAPH
+            h1 - h6 -- various sizes of heading form
+            ul/ol -- these are unordered (bulleted) and ordered (numbered) lists
+            li -- list items
+            table -- a set of rows and colums for laying out data
+
+        SEMANTIC INLINE TAGS:
+        these are for spans of text you want to have certain properties
+
+            strong -- bold (used to b)
+            em -- emphasis = italics (used to be i)
+            sub/sup -- subetext/supertext
+            a -- anchor = a hyperlink to another page/section/resource
+            img -- image, and this on is self-closing
+
+
+        -->
+
+    <div>
+        <strong>Lorem ipsum</strong> <em>dolor sit amet consectetur</em> <sub>adipisicing elit</sub>. <sup>Sit rem</sup> in natus odit, modi distinctio amet! Aspernatur, totam quam non animi temporibus asperiores dolorum placeat, quidem ab veritatis magni error.
+    </div>
+
+        <!-- This text is linked to another webpage.
+
+            the link requires some properties
+            the href property identifies where the link is going
+                can be a webpage, file, img, etc.
+        
+            the taget property tells the link where to open
+                _self is the same tab (default)
+                _blank is a new tab
+        -->
+
+    <p><a href="https://en.wikipedia.org/wiki/Penguin"
+        target="_blank">Here is a hyperlink using the a tag!</a></p>
+
+    <p><a href="quick-markup.html">here's a link to another local page</a></p>
+
+    <p><a href="..images/cutepenguin.jpeg" target="_blank">Here's our cute little penguin!</a></p>
+
+    <p><a href="tags.html#fun-anchor-link">Linking to our on-page anchor</a></p>
+
+        
+        <div>
+            <!-- here's an image, this tag is self-closing ->/ -->
+            <!-- the src property tells us where the image is 
+            the alt property gives us text about the image
+            this is critical if the image doesn't display 
+            or if someone is using a screen reader 
+            width/height can be stuck in here, better via CSS-->
+            <img src="https://i.natgeofe.com/n/30652a2b-56fc-4c89-8ba7-8e011336a20a/penguins_04_4x3.jpg" alt="hello-penguin" width="400px" />
+        </div>
+
+        <div>
+            <img src="../images/cutepenguin.jpeg" alt="cute-penguin">
+        </div>
+
+    <section style="background-color: yellow;">
+      <p>Here is a <strong>paragraph</strong></p>
+      <p>Here is another one</p>
+    </section>
+
+    <section>
+      <div>This is a div tag that contains some text</div>
+      <div>Here's another div tag. Note how it's on its own line!</div>
+      <div><span style="color:red">Here are some spans</span> to see how they're 
+      <span>different from divs.</span></div>
+    </section>
+
+    <p></p>
+
+    <h1>heading1</h1>
+    <h2>heading2</h2>
+    <h3>heading3</h3>
+    <h4>heading4</h4>
+    <h5>heading5</h5>
+    <h6>heading6</h6>
+
+    <!-- you can nest lists to tab in subitems, etc -->
+    <!-- just make -->
+    <ul>
+        <li>unordered list item 1</li>
+            <ul>
+                <li>sublist1</li>
+                <li>sublist2</li>
+                <li>sublist3</li>
+            </ul>
+        <li>unordered list item 2</li>
+        <li>unordered list item 3</li>
+    </ul>
+
+    <ol>
+        <li>ordered list item 1</li>
+        <li>ordered list item 2</li>
+        <li>ordered list item 3</li>
+    </ol>
+
+    <!-- br is a line break -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- the id property is a unique identifier for an element -->
+    <h6 id="fun-anchor-link">Where we're linking to with our anchor link.</h6>
+
+
+
+
+
+
+
+
+      <footer style="background-color: lightgray;">PAGE FOOTER</footer>
+
+
+
+</body>
+</html>

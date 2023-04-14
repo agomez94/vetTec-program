@@ -1,0 +1,96 @@
+/* this is a CSS comment */
+/* this is a CSS rule
+    it outlines the properties for the given selector */
+
+/* if you just type a tag name, the style applies to all tags of that type */
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(../images/cutellama.jpg);
+    background-repeat:no-repeat;
+    /* for sizing, % means percent of the containing element
+        vw = the view width
+        vh = the view height -- the viewing size of browser window */
+    background-size: 100% 100%;
+
+}
+/* rgba is red, green, blue, alpha
+    alpha is the transparency level
+    0 is transparent, 1 is opaque */
+#container {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+/* we can add multiple tag types to a single selector
+    by seperating with commas */
+
+h1, h2, h3, p {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+h1 a {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* this is a pseudo-selector
+    this one indicates styles when the user hovers over a link */
+h1 a:hover {
+    text-decoration: underline;
+    color: crimson;
+    transition: color 1s;
+}
+
+/* this one indicates styles when a user has already been to the link */
+h1 a:visited {
+    color: darkmagenta;
+}
+
+/* you can style elements in certain aread by specifiying 
+    their more detailed location
+    
+    in this case, ONLY h3 tags inside aside tags inside main tags
+        inside body tags will be styled
+*/
+aside h3 {
+    font-style: italic;
+}
+
+/* can create a CSS class to style certain elements without
+    styling ALL elements of that type */
+    /* use the name you want with a . at the beginning */
+
+.fun-tidbit {
+    font-style: italic;
+    color: brown;
+
+}
+
+.fun-tidbit-heading {
+    text-transform: uppercase;
+}
+
+/* we can style an individual HTML id by using # */
+
+#top-head {
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.sidebar {
+    width: 210px;
+    background-color: darkolivegreen;
+    color: white;
+    float: right;
+    /* margin can contain multiple values */
+    /* top right bottom left */
+    margin: 0px 24px 12px 12px ;
+}
+
+/* in this case, ONLY li tags that are direct descendants of ol tags will 
+be styled */
+ol > li {
+    font-size: 12px;
+}

@@ -1,0 +1,81 @@
+/* you can style EVEYRTHING at once by using the asterisk */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+}
+
+body {
+    padding: 24px;
+}
+
+
+
+p {
+    margin-bottom: 48px;
+}
+
+/* this class is applied to our flexible container
+    display: flex turns it into a flexbox
+    flex-direction determins the order and orientation */
+.flex-box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* justify-content */
+    /*
+        baseline (default)
+        center -- centers everything, smashed together
+        space-between -- equally divides up the available space between items
+        space-around -- same as above, but also the space at the beginning/end
+        
+    */
+
+    justify-content: space-between;
+}
+
+.nav {
+    background-color: lightgray;
+    padding: 20px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+
+div {
+    width: 100px;
+    padding: 70px 0px;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}

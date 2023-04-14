@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Style Sheets</title>
+
+    <!-- this is how you link in an external stylesheet -->
+    <!-- the rel property tells it what kind of link this is -->
+    <!-- href leads to your CSS file -->
+    <link rel="stylesheet" href="../css/cascading.css">
+
+    <!-- CSS = Cascading Style Sheets -->
+
+    <!-- 
+
+        We can put style information in three places:
+            - in an individual tag (good for quick spot styling)
+            - inside a style tag in the page head (for styles that apply to the whole page)
+            - in an external style sheet that can be loaded into multiple pages
+     -->
+
+    <!-- This style tag inside the head applies to all tags on this page ONLY -->
+
+    <!-- <style>
+        this is a CSS comment
+        /* this is a CSS rule
+            it outlines the properties for the given selector */
+
+        /* if you just type a tag name, the style applies to all tags of that type */
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-image: url(../images/cutellama.jpg);
+            background-repeat:no-repeat;
+            /* for sizing, % means percent of the containing element
+                vw = the view width
+                vh = the view height -- the viewing size of browser window */
+            background-size: 100% 100%;
+
+        }
+        /* rgba is red, green, blue, alpha
+            alpha is the transparency level
+            0 is transparent, 1 is opaque */
+        #container {
+            background-color: rgba(255, 255, 255, .5);
+        }
+
+        /* we can add multiple tag types to a single selector
+            by seperating with commas */
+
+        h1, h2, h3, p {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+
+        h1 a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        /* this is a pseudo-selector
+            this one indicates styles when the user hovers over a link */
+        h1 a:hover {
+            text-decoration: underline;
+            color: crimson;
+            transition: color 1s;
+        }
+
+        /* this one indicates styles when a user has already been to the link */
+        h1 a:visited {
+            color: darkmagenta;
+        }
+        
+        /* you can style elements in certain aread by specifiying 
+            their more detailed location
+            
+            in this case, ONLY h3 tags inside aside tags inside main tags
+                inside body tags will be styled
+        */
+        aside h3 {
+            font-style: italic;
+        }
+
+        /* can create a CSS class to style certain elements without
+            styling ALL elements of that type */
+            /* use the name you want with a . at the beginning */
+
+        .fun-tidbit {
+            font-style: italic;
+            color: brown;
+
+        }
+
+        .fun-tidbit-heading {
+            text-transform: uppercase;
+        }
+
+        /* we can style an individual HTML id by using # */
+
+        #top-head {
+            text-transform: uppercase;
+            font-size: 50px;
+        }
+
+        .sidebar {
+            width: 210px;
+            background-color: darkolivegreen;
+            color: white;
+            float: right;
+            /* margin can contain multiple values */
+            /* top right bottom left */
+            margin: 0px 24px 12px 12px ;
+        }
+
+        /* in this case, ONLY li tags that are direct descendants of ol tags will 
+        be styled */
+        ol > li {
+            font-size: 12px;
+        }
+
+    </style> -->
+    
+</head>
+<body>
+
+    <main id="container">
+
+        <!-- styling a tag inside the HTML, good for spot styling -->
+        <!-- syntax -- style="property-name: Property-value;" -->
+        <!-- if you have multiple properties, must have semicolon between them -->
+        <header style="background-color: lightgray; height: 50px;"></header>
+
+        <h1 id="top-head"><a href="https://www.amazon.com/Love-Llamas-Llama-Notebook-Journal/dp/B08MMZYKKC">Llamas!</a></h1>
+
+        <h2>All About Llamas</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos, labore temporibus porro voluptate, neque incidunt, eaque quas architecto dolore nulla cumque illo veniam nesciunt veritatis repellendus dolores laudantium? Dignissimos.</p>
+
+        <h3>Llama Facts</h3>
+    
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+        </ul>
+
+        <!-- tagging an element with a CSS class -->
+        <!-- can tag an element with multiple classes, separated by a space -->
+        <h3 class="fun-tidbit fun-tidbit-heading">Llama Fun Tidbit</h3>
+
+        <p class="fun-tidbit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste iusto dolorem, deleniti amet nam odio accusamus impedit beatae minima qui? Fugiat, nam rerum eius sed commodi eaque consectetur. Maxime.</p>
+
+
+
+        <h2>The History Of Llamas</h2>
+
+        <aside class="sidebar">
+            <h3>Llama Timeline</h3>
+            <ol>
+                <li>Timeline Element 1</li>
+                <li>Timeline Element 2</li>
+             <li>Timeline Element 3</li>
+            </ol>
+        </aside>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sunt tempora nam minus dolorum velit dolorem temporibus natus pariatur eos sapiente, repudiandae porro facilis hic quo, nisi aspernatur quidem ullam.
+        Soluta, laborum officiis iusto temporibus asperiores eius repudiandae earum nemo voluptas, possimus eos deleniti excepturi, perspiciatis ipsum ullam. Eius molestiae distinctio dolore rerum reprehenderit inventore delectus repellat consequuntur perspiciatis voluptatum?
+        Eos debitis rem at, facere voluptatibus quasi reiciendis vitae quaerat culpa beatae sint esse distinctio illo labore quo doloribus rerum minima commodi! Distinctio beatae nostrum quaerat repellendus id nisi placeat!
+        Quaerat ex voluptates eligendi error temporibus. Ipsam, placeat eos odit sint cum saepe perspiciatis dolorum ad ratione unde animi iste aut ex! Ut possimus doloremque eaque ipsa harum illo et.</p>
+
+
+
+        <footer style="background-color: lightgray;
+                    height: 50px;
+                    font-weight: bold;
+                    text-align: center;
+                    padding-top: 12px;">
+            &copy;2023 Llamaworks, LLC
+        </footer>
+    </main>
+    
+</body>
+</html>

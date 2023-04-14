@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>div {margin-bottom: 16px;}</style>
+</head>
+<body>
+
+    <!-- FORMS IN HTML -->
+
+    <!-- 
+        Forms can take many... wait for it... forms!
+        can be a simple login, a registration form
+        Anything where the user's data is being collected and 
+        dealt with in some way
+
+
+        we can have the user fill in important information 
+            - name
+            - birthday
+            - ssn
+            - phone
+            - email
+
+        We can also have them select/input other information
+            via non-typing means
+            - buttons
+            - checkboxes
+            - color selectors
+
+        We use diffenrent types of tag to collect different types of information
+            - form
+            - select
+            - buttons
+            - input
+
+        The <input> tag is critical and can take on many types 
+            - text 
+            - date
+            - number
+            - color
+            - email
+            - radio buttons
+            - checkboxes
+            - file uploads
+
+        At the end of the form proocess, the user will submit the form
+
+        ONLY inputs WITHIN the form tag will be submitted with the form
+     -->
+        <!-- here is the form tag, which contains the action property
+          the other important property is method -->
+
+          <!-- CRUD operations
+            these are the basic operations we use with databases
+
+            C = create
+            R = read
+            U = update
+            D = delete
+
+            C is done with a POST request
+            R is done with a GET request
+            U is done with a PUT request
+            D is done with a DELETE request
+            
+            form's method property deals with POST and GET
+        
+        -->
+
+        <!-- This form makes a GET request to Google
+            GET says "Give me the resource in the action property" -->
+     <form method="GET" action="http://www.google.com">
+
+
+        <!-- all other preevious tags are still relevant in a form -->
+        <p>Go to Google.com</p>
+
+        <!-- this buttom submits the form, executing the GET -->
+
+        <button type="submit">SUBMIT</button>
+
+
+     </form>
+
+    <br><br><br><br><br><br><br>
+
+    <!-- this form makes a POST request to W3Schools
+            it sends our collected form data to be displayed -->
+
+    <form method="POST" action="https://www.w3schools.com/action_page.php">
+
+        <p>POST form -- sends data somewhere</p>
+
+        <!-- this div is just for ease of reading the webpage -->
+        <div>
+            <!-- this is a label for a field
+                - the for property is the id of the field it's 
+                labeling -->
+            <label for="first-name">First Name: </label>
+            <!-- this input collects typed text
+                - id matches it to its label
+                - name is the key the entered value will be
+                    matched to in the output -->
+                <!-- placeholder ghosts in some sample text -->
+            <input id="first-name" name="first-name" type="text" 
+                placeholder="Enter your first name"/>
+        </div>
+            <!-- names must be unique, or they will overwrite each other -->
+    <div>
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" name="last-name" type="text"
+            placeholder="Enter your last name" />
+    </div>
+
+    <!-- the number type allows only numberical values -->
+    <div>
+        <label for="age">Age:</label>
+        <!-- you can set a min, max, or increment (step) -->
+        <input id="age" name="age" type="number" step="10" 
+        min="0" max="150" />
+    </div>
+    <!-- the color type uses a color picker, submits hex value -->
+    <div>
+        <label for="favorite-color">Favorite Color:</label>
+        <input id="favorite-color" name="favorite-color" 
+        type="color" />
+    </div>
+    <!-- the date type lets the user type in a date or select it from a calender -->
+    <div>
+        <label for="birthday">Birthday:</label>
+        <input id="birthday" name="birthday" type="date" />
+    </div>
+
+    <!-- checkboxes submit a value if checked, don't if not 
+        must include the value property to give it a specific value, otherwise will submit "on"-->
+
+    <p>Whaddaya love?</p>
+
+    <div>
+        <input id="pizza-lover" name="pizza-lover" type="checkbox" value="Yes" />
+        <!-- labels CAN be after...or ANYWHERE -->
+        <label for="pizza-lover">Pizza Lover</label>
+    </div>
+
+    <div>
+        <input id="music-lover" name="music-lover" type="checkbox" value="Yes" />
+        <label for="music-lover">Music lover</label>
+    </div>
+
+    <!-- RADIO BUTTONS allow selection of ONLY one within a group -->
+
+    <p>What kind of pizza do you prefer?</p>
+
+    <!-- radio buttons in a group MUST have the same name property so when you select one, the others get deselected -->
+    <!-- like with cehckboxes, you need a value property -->
+    
+    <div>
+        <input id="cheese-pizza" name="pizza-preference" type="radio" value="Cheese Pizza" />
+        <label for="cheese-pizza">Cheese Pizza</label>
+
+        <input id="pepperoni-pizza" name="pizza-preference" type="radio" value="Pepperoni Pizza" />
+        <label for="pepperoni-pizza">Pepperoni Pizza</label>
+
+        <input id="meat-lovers-pizza" name="pizza-preference" type="radio" value="Meat lover's Pizza" />
+        <label for="meat-lovers-pizza">Meat Lover's Pizza</label>
+
+        <input id="hawaiian-pizza" name="pizza-preference" type="radio" value="Hawaiian Pizza" />
+        <label for="hawaiian-pizza">Hawaiian Pizza</label>
+    </div>
+
+    <p>What's your favorite genre of music?</p>
+
+    <!-- the select tag creates a dropdown with choices -->
+    <div>
+        <label for="music-preference">Favorite Genre:</label>
+        <!-- name is the key for any submitted choice -->
+        <select name="music-prefernce" id="music-preference">
+
+                <!-- each option needs a value and dropdown text -->
+                <option value="rock">Rock</option>
+                <option value="r+b">R&B</option>
+                <option value="edm">EDM</option>
+                <option value="jazz">Jazz</option>
+                <option value="reggae">Reggae</option>
+                <option value="disco">Disco</option>
+
+        </select>
+    </div>
+
+    <!-- button type reset will clear the form -->
+    <button type="reset">RESET</button>
+    <!-- button type submit will submit the form -->
+    <button type="submit">SUBMIT</button>
+
+    </form>
+
+
+
+</body>
+
+</html>
+
+<!-- 
+
+    form submission is very similar in format to JSON
+        - JavaScript Object Notation
+
+    {
+        first-name: "Angel",
+        last-name: "Gomez Jr",
+        age: 29,
+        music-preference: "Rock"
+    }
+
+
+ -->
